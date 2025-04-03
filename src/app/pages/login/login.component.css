@@ -1,0 +1,111 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #7c7575;
+  padding: 20px;
+}
+
+.login-card {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: #464444;
+  color: white;
+}
+
+mat-card-header {
+  margin-bottom: 20px;
+  color: white;
+}
+
+mat-card-title {
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: #90caf9;
+  font-size: 14px;
+}
+
+.login-button {
+  height: 45px;
+  font-size: 16px;
+  color: white;
+}
+
+/* Make sure form inputs have white text */
+::ng-deep .mat-form-field-label,
+::ng-deep .mat-input-element,
+::ng-deep .mat-checkbox-label {
+  color: white !important;
+}
+
+::ng-deep .mat-form-field-outline,
+::ng-deep .mat-form-field-underline {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+::ng-deep .mat-icon {
+  color: white !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 599px) {
+  .login-card {
+    padding: 15px;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .forgot-password {
+    margin-top: 10px;
+  }
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+}
+
+.register-link a {
+  color: #ff8a80; /* Light red color */
+  text-decoration: none;
+}
+
+.register-link a:visited {
+  color: #ff8a80; /* Keep the same light red even when visited */
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.register-link a:active {
+  color: #ff5252; /* Slightly darker red when clicked */
+}
