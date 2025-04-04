@@ -1,0 +1,56 @@
+<div class="home-container">
+  <mat-card class="welcome-card">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>sensAttendance</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        A powerful attendance management solution built with Angular and
+        Material UI
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="features-slider">
+        <div class="features-container">
+          <mat-card
+            class="feature-card"
+            [@slideAnimation]="currentFeatureIndex"
+          >
+            <div class="feature-icon-wrapper">
+              <mat-icon class="feature-icon">{{
+                features[currentFeatureIndex].icon
+              }}</mat-icon>
+            </div>
+            <mat-card-header>
+              <mat-card-title class="feature-title">
+                {{ features[currentFeatureIndex].title }}
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="feature-description">
+                {{ features[currentFeatureIndex].description }}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div class="slider-controls">
+          <div
+            *ngFor="let feature of features; let i = index"
+            class="slider-dot"
+            [class.active]="i === currentFeatureIndex"
+            (click)="selectFeature(i)"
+          ></div>
+        </div>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions align="end" class="action-buttons">
+      <button mat-button routerLink="/login">Login</button>
+      <button mat-raised-button color="primary" routerLink="/register">
+        Get Started
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
